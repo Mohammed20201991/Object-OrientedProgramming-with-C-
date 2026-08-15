@@ -1,7 +1,6 @@
 # Object-OrientedProgramming-with-CPP
-# Object-Oriented Programming with C++
 
-## Second Year – Computer Science / Artificial Intelligence
+## Second Year – Artificial Intelligence/ Colleage of Information Technology
 
 ---
 
