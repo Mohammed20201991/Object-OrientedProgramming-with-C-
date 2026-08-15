@@ -78,3 +78,120 @@ The course focuses on four major principles:
                             |
                        Polymorphism
 ```
+# Main Concepts Students Must Master
+
+## Fundamental
+
+* Classes
+* Objects
+* Constructors
+* Destructors
+* Encapsulation
+* Abstraction
+
+## Intermediate
+
+* Composition
+* Aggregation
+* Operator Overloading
+* Inheritance
+* Polymorphism
+* Abstract Classes
+
+## Advanced
+
+* Dynamic Memory
+* Object Copying
+* Templates
+* Exception Handling
+* STL
+* Modern C++
+
+---
+
+# Final Course Project
+
+Students will develop a complete **C++ OOP application**.
+
+## Recommended Projects
+
+1. University Management System
+2. Library Management System
+3. Hospital Management System
+4. Banking System
+5. Hotel Management System
+6. Vehicle Rental System
+7. Cinema Management System
+8. E-Commerce Management System
+9. Student Management System
+10. AI Dataset Management System
+
+## Project Requirements
+
+The project must demonstrate several OOP concepts, including:
+
+* Classes
+* Encapsulation
+* Constructors
+* Composition
+* Inheritance
+* Polymorphism
+* Exception Handling
+* STL
+* Good Class Design
+
+---
+
+# Recommended C++ Standard
+
+The course should use:
+
+**C++17**
+
+C++20 features can be introduced where appropriate.
+
+---
+
+# Recommended Development Tools
+
+Students may use:
+
+* Visual Studio
+* Visual Studio Code
+* Code::Blocks
+* GCC / MinGW
+* CMake – Introduction
+
+---
+
+# Expected Final Outcome
+
+After completing this course, students should be able to transform a real-world problem into an object-oriented design and implement it as a complete C++ application.
+
+## OOP Application Development Workflow
+
+```text
+Real-World Problem
+        ↓
+Identify Objects
+        ↓
+Identify Classes
+        ↓
+Identify Attributes
+        ↓
+Identify Methods
+        ↓
+Identify Relationships
+        ↓
+Encapsulation
+        ↓
+Inheritance / Composition
+        ↓
+Polymorphism
+        ↓
+Implementation in C++
+        ↓
+Testing
+        ↓
+Complete OOP Application
+```
