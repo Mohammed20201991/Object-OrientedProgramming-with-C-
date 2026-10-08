@@ -1,0 +1,38 @@
+1. Task_1 — Array of Objects (Employee Management System)
+Write a C++ program using a class Employee to store information about 5 employees.
+Each employee has:
+        name
+        id
+        salary
+The class must contain:
+A function display() to display employee information.
+A function isHighSalary() that returns true if the salary is greater than or equal to 1,000,000 IQD.
+
+In main():
+
+Create an array of 5 Employee objects.
+Enter the information for the 5 employees.
+Display all employees.
+Display whether each employee has a high salary.
+Display the employee with the highest salary.
+Requirements
+
+Students must use:
+class Employee  and: Employee employees[5];
+
+You have to use separate arrays such as:
+
+string names[5];
+int ids[5];
+double salaries[5];
+Expected structure
+        Employee
+        │
+        ├── name
+        ├── id
+        ├── salary
+        │
+        ├── display()
+        └── isHighSalary()
+                ↓
+        Employee employees[5]
