@@ -1,0 +1,17 @@
+Task: Add a Smart Door to the Classroom
+Objective: Create a new class named SmartDoor without using a constructor.
+Requirements
+1. Add three attributes:
+   - id     — integer
+   - room   — string
+   - isOpen — Boolean
+2. Create a setter() method to initialize the attributes. The door should initially be closed.
+3. Create an openDoor() method to open the door.
+4. Create a closeDoor() method to close the door.
+5. Create a display() method to print the door's ID, room, and status.
+6. In main(), create two SmartDoor objects, open the first door, and display the status of both doors.
+Expected output format
+Door 1 (AI Lab) Status=Open
+Door 2 (AI Lab) Status=Closed
+
+Hint: Use bool isOpen, initialize it to false in setter(), and use true or false in the door methods.

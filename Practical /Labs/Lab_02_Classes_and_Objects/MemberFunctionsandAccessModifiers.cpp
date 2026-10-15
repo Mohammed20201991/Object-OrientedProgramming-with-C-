@@ -6,7 +6,6 @@ class Student
 private:
     string name; // Private data
     int age;
-
 public:
     void setName(string n)
     {     name = n;  }
@@ -16,7 +15,6 @@ public:
         if (a > 0)
             age = a;
     }
-
     void display()
     {
         cout << "Name: " << name << endl;
