@@ -1,0 +1,5 @@
+Scenario: A robot searches a disaster area and avoids obstacles to reach a target.
+- Robotics: Movement, motors, ultrasonic sensors.
+- AI: Obstacle avoidance and path planning.
+- OOP: Classes such as Robot, Sensor, and NavigationSystem.
+Student challenge: Make the robot stop when an obstacle is too close and choose a safe direction.
