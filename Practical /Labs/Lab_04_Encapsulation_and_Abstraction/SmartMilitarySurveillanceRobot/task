@@ -1,0 +1,5 @@
+Scenario: A ground robot patrols a designated area and detects unexpected movement.
+- Robotics: Wheels, camera, distance sensors.
+- AI: Object detection or motion detection.
+- OOP: Classes such as PatrolRobot, Camera, and DetectionSystem.
+Student challenge: Detect a person or moving object and send an alert. Keep the project focused on observation and safety.
