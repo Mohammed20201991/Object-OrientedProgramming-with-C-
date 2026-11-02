@@ -1,0 +1,87 @@
+Lab Task: Rocket Launch Control System
+Topic: Encapsulation in C++
+Estimated time: 20-30 minutes
+
+SCENARIO
+You are programming a rocket launch system. The rocket has a fuel level and a launch status. 
+Protect the rocket's data and ensure that it cannot launch without enough fuel.
+
+STUDENT REQUIREMENTS
+
+1. Private data members:
+   - fuel: an integer representing fuel percentage.
+   - launched: a Boolean indicating whether the rocket has launched.
+
+2. Public methods:
+   - refuel(int amount): increases fuel, but fuel must not exceed 100%.
+   - launch(): launches the rocket only if fuel is at least 50% and it has not already launched.
+   - displayStatus(): displays the current fuel and launch status.
+
+3. Constructor:
+   - Initialize fuel to 0 and launched to false.
+
+4. Encapsulation rule:
+   - Do not allow direct access to the private data members.
+
+EXPECTED BEHAVIOR
+- Initial state: Fuel: 0% | Not launched
+- Attempt to launch: Display "Insufficient fuel!"
+- Refuel by 70%: Fuel becomes 70%
+- Launch successfully: Display "Rocket launched successfully!"
+- Attempt to launch again: Display "Rocket has already launched!"
+
+STARTER CODE
+
+#include <iostream>
+using namespace std;
+
+class Rocket {
+private:
+    int fuel;
+    bool launched;
+
+public:
+    // Initialize the rocket
+    Rocket() : fuel(0), launched(false) {}
+
+    // Increase fuel without exceeding 100%
+    void refuel(int amount) {
+        // TODO
+    }
+
+    // Launch only when fuel is at least 50%
+    void launch() {
+        // TODO
+    }
+
+    // Display fuel and launch status
+    void displayStatus() const {
+        // TODO
+    }
+};
+
+int main() {
+    Rocket r;
+
+    r.displayStatus();
+    r.launch();
+
+    r.refuel(70);
+    r.displayStatus();
+
+    r.launch();
+    r.launch();
+
+    return 0;
+}
+
+CHALLENGE QUESTIONS
+
+1. Why are fuel and launched declared private?
+2. What could happen if fuel were public?
+3. How can you prevent the fuel level from exceeding 100%?
+4. Why should the rocket not launch twice?
+BONUS CHALLENGE
+
+Add a cancelLaunch() method that resets the rocket to a safe, unlaunched state only 
+when the rocket has not launched yet. Explain why the method must validate the rocket's state.
