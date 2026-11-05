@@ -2,9 +2,11 @@
 C++ Programming Quiz – 10 Marks
 Question 1: Constructor, Destructor, and Object Lifetime (5 Marks)
 Consider the following C++ program:
+
 ------------------------------------------------
 Question 2: Encapsulation and Constructors (5 Marks)
 Scenario: Employee Salary Management
+
 Create a C++ class called Employee with the following requirements:
 1. Two private data members: name (string) and salary (double).
 2. A parameterized constructor to initialize the employee's name and salary.
