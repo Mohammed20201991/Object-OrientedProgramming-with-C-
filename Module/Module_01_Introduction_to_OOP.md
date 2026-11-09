@@ -1,7 +1,6 @@
 # Module 1 – Introduction to OOP
 
 ## Topics
-
 * What is Object-Oriented Programming (OOP)?
 * Procedural Programming
 * Structured Programming
