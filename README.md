@@ -1,6 +1,29 @@
 # Object-OrientedProgramming-with-CPP
 
-## Second Year – Artificial Intelligence/ Colleage of Information Technology
+## Second Year – Artificial Intelligence / College of Information Technology
+
+---
+
+## Table of Contents
+
+1. [Course Description](#course-description)
+2. [Prerequisites](#prerequisites)
+3. [Course Objectives](#course-objectives)
+4. [Core OOP Principles](#core-oop-principles)
+5. [Main Concepts Students Must Master](#main-concepts-students-must-master)
+6. [Final Course Project](#final-course-project)
+7. [Recommended C++ Standard and Tools](#recommended-c-standard)
+8. [Expected Final Outcome](#expected-final-outcome)
+9. [Repository Structure](#repository-structure)
+10. [Getting the Repository](#getting-the-repository)
+11. [Docker Development Environment](#docker-development-environment)
+12. [Running the Practical Labs](#running-the-practical-labs)
+13. [Debugging with GDB](#debugging-with-gdb)
+14. [Using VS Code](#using-vs-code)
+15. [Command Cheat Sheet](#command-cheat-sheet)
+16. [Troubleshooting](#troubleshooting)
+17. [Git Workflow](#git-workflow)
+18. [License](#license)
 
 ---
 
@@ -20,8 +43,9 @@ The course focuses on transitioning from procedural programming to object-orient
 
 Students will learn how to design programs using classes and objects and will progressively study encapsulation, abstraction, composition, inheritance, polymorphism, templates, exception handling, STL, and modern C++ concepts.
 
+---
 
-# Prerequisites
+## Prerequisites
 
 Students should already understand:
 
@@ -38,8 +62,9 @@ Students should already understand:
 - File handling
 - Basic C++ syntax
 
+---
 
-# Course Objectives
+## Course Objectives
 
 By the end of this course, students should be able to:
 
@@ -64,8 +89,9 @@ By the end of this course, students should be able to:
 19. Design medium-sized programs using OOP principles.
 20. Develop a complete OOP-based software project.
 
+---
 
-# Core OOP Principles
+## Core OOP Principles
 
 The course focuses on four major principles:
 
@@ -78,9 +104,12 @@ The course focuses on four major principles:
                             |
                        Polymorphism
 ```
-# Main Concepts Students Must Master
 
-## Fundamental
+---
+
+## Main Concepts Students Must Master
+
+### Fundamental
 
 * Classes
 * Objects
@@ -89,7 +118,7 @@ The course focuses on four major principles:
 * Encapsulation
 * Abstraction
 
-## Intermediate
+### Intermediate
 
 * Composition
 * Aggregation
@@ -98,7 +127,7 @@ The course focuses on four major principles:
 * Polymorphism
 * Abstract Classes
 
-## Advanced
+### Advanced
 
 * Dynamic Memory
 * Object Copying
@@ -109,11 +138,11 @@ The course focuses on four major principles:
 
 ---
 
-# Final Course Project
+## Final Course Project
 
 Students will develop a complete **C++ OOP application**.
 
-## Recommended Projects
+### Recommended Projects
 
 1. University Management System
 2. Library Management System
@@ -126,7 +155,7 @@ Students will develop a complete **C++ OOP application**.
 9. Student Management System
 10. AI Dataset Management System
 
-## Project Requirements
+### Project Requirements
 
 The project must demonstrate several OOP concepts, including:
 
@@ -142,20 +171,19 @@ The project must demonstrate several OOP concepts, including:
 
 ---
 
-# Recommended C++ Standard
+## Recommended C++ Standard
 
-The course should use:
+The course uses:
 
 **C++17**
 
 C++20 features can be introduced where appropriate.
 
----
-
-# Recommended Development Tools
+### Recommended Development Tools
 
 Students may use:
 
+* Docker (recommended, see [Docker Development Environment](#docker-development-environment))
 * Visual Studio
 * Visual Studio Code
 * Code::Blocks
@@ -164,11 +192,11 @@ Students may use:
 
 ---
 
-# Expected Final Outcome
+## Expected Final Outcome
 
 After completing this course, students should be able to transform a real-world problem into an object-oriented design and implement it as a complete C++ application.
 
-## OOP Application Development Workflow
+### OOP Application Development Workflow
 
 ```text
 Real-World Problem
@@ -196,20 +224,360 @@ Testing
 Complete OOP Application
 ```
 
-```
+---
+
+## Repository Structure
+
+```text
 Object-OrientedProgramming-with-C-/
 │
-├── Dockerfile
+├── Dockerfile                # Development environment definition
 ├── .dockerignore
 │
 ├── .devcontainer/
-│   └── devcontainer.json
+│   └── devcontainer.json     # VS Code Dev Container configuration
 │
 ├── .vscode/
-│   ├── tasks.json
-│   └── launch.json
+│   ├── tasks.json            # Build tasks
+│   └── launch.json           # Debug configuration
 │
-├── Module/
-├── Practical/
+├── Module/                   # Lecture / module material
+├── Practical/                # Practical labs and assignments
+│   ├── Labs/
+│   │   ├── Lab_02_Classes_and_Objects/
+│   │   ├── Lab_05_NamespaceAndLinkage/
+│   │   │   └── ExternalLinkagewithClasses/
+│   │   │       ├── main.cpp
+│   │   │       ├── Student.cpp
+│   │   │       └── Student.h
+│   │   └── ...
+│   └── Assignment/
+│
+├── LICENSE
 └── README.md
 ```
+
+> The contents of `Module/` and `Practical/` grow as the course progresses.
+
+---
+
+## Getting the Repository
+
+### Prerequisites
+
+| Tool | Purpose | Required |
+| --- | --- | --- |
+| Docker Desktop for Windows | Runs the C++ development container | Yes |
+| Git | Clone and update the repository | Yes |
+| Visual Studio Code | Editing code | Recommended |
+
+Make sure **Docker Desktop is running** before using any `docker` command.
+
+### Clone
+
+```powershell
+git clone https://github.com/Mohammed20201991/Object-OrientedProgramming-with-C-.git
+cd Object-OrientedProgramming-with-C-
+```
+
+### Windows error: `invalid path 'Practical /Assignment/...'`
+
+If cloning on Windows ends with:
+
+```text
+error: invalid path 'Practical /Assignment/Assignment_1.pdf'
+fatal: unable to checkout working tree
+```
+
+a folder in the repository is named `Practical ` **with a trailing space**. Windows does not allow folder names ending in a space, so Git cannot create it. The download succeeded; only the checkout failed.
+
+**Workarounds**
+
+- **Clone inside WSL** (Linux allows trailing spaces), then copy the folder out:
+
+  ```bash
+  git clone https://github.com/Mohammed20201991/Object-OrientedProgramming-with-C-.git
+  cd Object-OrientedProgramming-with-C-
+  mkdir -p ~/practical
+  cp -r "Practical /." ~/practical/
+  ```
+
+  Open it from Windows File Explorer at `\\wsl$\<distro>\root\practical` (get `<distro>` from `wsl -l`).
+
+- **Skip the folder with sparse checkout:**
+
+  ```powershell
+  git sparse-checkout init --no-cone
+  git sparse-checkout set "/*" "!/Practical */"
+  git checkout
+  ```
+
+- **Download single files** from the GitHub web page.
+
+> **Maintainer fix:** rename the folder once from WSL/Linux, then push. After that, normal Windows clones work.
+>
+> ```bash
+> git mv "Practical " Practical
+> git commit -m "Remove trailing space from Practical folder name"
+> git push origin main
+> ```
+
+---
+
+## Docker Development Environment
+
+The repository uses Docker so every student compiles with the same tools, without installing GCC/G++ on Windows.
+
+| Item | Value |
+| --- | --- |
+| Image | `oop-cpp-dev:1.0` |
+| Base image | Ubuntu 24.04 |
+| Compiler | G++ |
+| C++ standard | C++17 |
+| Debugger | GDB |
+
+### Dockerfile
+
+The `Dockerfile` in the repository root is similar to:
+
+```dockerfile
+FROM ubuntu:24.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        g++ \
+        gdb \
+        make \
+        build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+CMD ["/bin/bash"]
+```
+
+### Build the image (first time only)
+
+From the repository root in PowerShell:
+
+```powershell
+docker build -t oop-cpp-dev:1.0 .
+docker images
+```
+
+Rebuild only if the `Dockerfile` changes.
+
+### Start the container
+
+From the repository root:
+
+```powershell
+docker run -it --rm `
+  -v "${PWD}:/workspace" `
+  -w /workspace `
+  oop-cpp-dev:1.0
+```
+
+| Option | Meaning |
+| --- | --- |
+| `-it` | Interactive terminal |
+| `--rm` | Remove the container on exit (your files are kept) |
+| `-v "${PWD}:/workspace"` | Mount the current Windows folder into the container |
+| `-w /workspace` | Start in the mounted folder |
+
+Your source files stay on Windows. Anything you create or edit under `/workspace` is preserved after you exit.
+
+---
+
+## Running the Practical Labs
+
+### Standard workflow
+
+1. **Open PowerShell at the repository root.**
+
+   ```powershell
+   cd "D:\IT\مواد دراسية\المرحلة الثانية\OOP\repo\Object-OrientedProgramming-with-C-"
+   ```
+
+2. **Start the Docker container** (see above).
+
+3. **Go to the lab folder.**
+
+   ```bash
+   cd Practical/Labs/Lab_02_Classes_and_Objects
+   ls
+   ```
+
+4. **Compile all source files.**
+
+   ```bash
+   g++ -std=c++17 -Wall -Wextra -g *.cpp -o app
+   ```
+
+5. **Run.**
+
+   ```bash
+   ./app
+   ```
+
+6. **Exit when finished.**
+
+   ```bash
+   exit
+   ```
+
+### Example: Lab 05 – Namespace and Linkage
+
+```bash
+cd Practical/Labs/Lab_05_NamespaceAndLinkage/ExternalLinkagewithClasses
+g++ -std=c++17 -Wall -Wextra -g *.cpp -o app
+./app
+```
+
+Expected output:
+
+```text
+Student ID: 101
+Grade: 85
+
+Student ID: 102
+Grade: 90
+```
+
+### Any other lab
+
+Each lab is compiled from its own folder:
+
+```bash
+cd /workspace/Practical/Labs/<Lab_Folder_Name>
+g++ -std=c++17 -Wall -Wextra -g *.cpp -o app
+./app
+```
+
+### Multi-file programs
+
+When a program is split into `main.cpp`, `Student.cpp`, and `Student.h`, compile **all** `.cpp` files together. Headers (`.h`) are included by `#include` and are not passed to the compiler. `*.cpp` covers every source file in the folder. The explicit equivalent is:
+
+```bash
+g++ -std=c++17 -Wall -Wextra -g main.cpp Student.cpp -o app
+```
+
+### Compiler flags
+
+| Flag | Meaning |
+| --- | --- |
+| `-std=c++17` | Use the C++17 standard |
+| `-Wall -Wextra` | Enable common and extra warnings |
+| `-g` | Include debug information for GDB |
+| `-o app` | Name the executable `app` |
+
+---
+
+## Debugging with GDB
+
+Compile with `-g`, then start GDB:
+
+```bash
+gdb ./app
+```
+
+| Command | Action |
+| --- | --- |
+| `break main` | Breakpoint at `main` |
+| `break file.cpp:25` | Breakpoint at line 25 |
+| `run` | Start the program |
+| `next` | Execute next line (step over) |
+| `step` | Step into a function |
+| `print var` | Show the value of `var` |
+| `backtrace` | Show the call stack |
+| `continue` | Run to the next breakpoint |
+| `quit` | Leave GDB |
+
+---
+
+## Using VS Code
+
+The repository includes VS Code configuration:
+
+- `.devcontainer/devcontainer.json` – opens the project inside the Docker container.
+- `.vscode/tasks.json` – build tasks.
+- `.vscode/launch.json` – debugging setup.
+
+**Option A: Dev Container (recommended)**
+
+1. Install the **Dev Containers** extension.
+2. Open the repository folder in VS Code.
+3. Press `Ctrl+Shift+P` and choose **Dev Containers: Reopen in Container**.
+
+VS Code then runs inside `oop-cpp-dev`, with the compiler and debugger ready.
+
+**Option B: Edit in VS Code, run in Docker**
+
+1. Open the repository folder in VS Code and install the **C/C++** extension.
+2. Keep a PowerShell window running the container.
+3. Save in VS Code, then compile and run in the container.
+
+---
+
+## Command Cheat Sheet
+
+| Command | Purpose |
+| --- | --- |
+| `docker build -t oop-cpp-dev:1.0 .` | Build the image |
+| `docker images` | List local images |
+| `docker run -it --rm -v "${PWD}:/workspace" -w /workspace oop-cpp-dev:1.0` | Start the environment |
+| `g++ --version` | Check compiler version |
+| `gdb --version` | Check debugger version |
+| `ls` / `pwd` | List files / show current directory |
+| `g++ -std=c++17 -Wall -Wextra -g *.cpp -o app` | Compile |
+| `./app` | Run the program |
+| `rm app` | Delete the executable |
+| `exit` | Leave the container |
+
+---
+
+## Troubleshooting
+
+| Problem | Cause / Fix |
+| --- | --- |
+| `invalid path 'Practical /...'` on clone | Trailing space in a folder name on Windows. See [Getting the Repository](#windows-error-invalid-path-practical-assignment). |
+| `docker: command not found` | Docker Desktop is not installed or not on PATH. |
+| Cannot connect to the Docker daemon | Start Docker Desktop and wait until it is running. |
+| `${PWD}` shown literally / empty mount | Use PowerShell, not CMD. In CMD use `%cd%`. |
+| `undefined reference to ...` | A `.cpp` file was not compiled. Use `*.cpp` or list every source file. |
+| `./app: No such file or directory` | The compile failed or you are in the wrong folder. Run `ls` and recompile. |
+| Header not found | Check the `#include "..."` name and location, or add `-I<path>`. |
+| `Read-only file system` in WSL | Write to another folder such as `~/OOP/...`. |
+| `code: not found` in WSL | VS Code is a Windows app. Open it from Windows and use the WSL extension. |
+| `Permission denied` on `./app` | Recompile, or run `chmod +x app`. |
+
+---
+
+## Git Workflow
+
+```bash
+git pull origin main          # get the latest changes
+git add .
+git commit -m "Describe your change"
+git push origin main
+```
+
+Tips:
+
+- Do not commit executables or build output. Add to `.gitignore`:
+
+  ```text
+  app
+  *.out
+  *.exe
+  *.o
+  ```
+
+- Run `git status` before committing.
+- Avoid folder or file names with trailing spaces or dots so the repository works on Windows.
+
+---
+
+## License
+
+This project is distributed under the terms of the [LICENSE](LICENSE) file.
