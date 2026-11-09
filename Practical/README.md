@@ -57,3 +57,22 @@ Each laboratory should contain:
 5. Exercises
 6. Challenge Problem
 7. Homework
+
+## Repo. Structuer
+```
+Object-OrientedProgramming-with-C-/
+│
+├── Dockerfile
+├── .dockerignore
+│
+├── .devcontainer/
+│   └── devcontainer.json
+│
+├── .vscode/
+│   ├── tasks.json
+│   └── launch.json
+│
+├── Module/
+├── Practical/
+└── README.md
+```
