@@ -10,7 +10,6 @@ private:
 
 public:
     Student(int i, int g);
-
     void display();
 };
 

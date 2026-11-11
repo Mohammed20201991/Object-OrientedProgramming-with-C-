@@ -9,7 +9,6 @@ namespace University {
         }
     };
 }
-
 int main() {
     University::Student s;
     s.display();
