@@ -79,7 +79,7 @@ int main()
 // Each element is a complete Student object:
         // students[0]
         // ┌─────────────────┐
-        // │ - name = "Ali"   │
+        // │ - name = "Ali"  │
         // │ - age = 20      │
         // │ - grade = 75    │
         // │-----------------│
@@ -100,8 +100,8 @@ int main()
 // -------------------------------------------------
         // STRUCTURED PROGRAMMING
 
-        // names[] ──────┐
-        // ages[] ───────┼──→ functions
+        // names[]  ─────┐
+        // ages[]   ─────┼──→ functions
         // grades[] ─────┘
 
         //             ↓ OOP
@@ -115,7 +115,6 @@ int main()
         // └── isPassed()
 
         //         ↓
-
         // Student students[3]
         //         ↓
         // Array of Objects
