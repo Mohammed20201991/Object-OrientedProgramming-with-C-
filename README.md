@@ -505,7 +505,6 @@ VS Code then runs inside `oop-cpp-dev`, with the compiler and debugger ready.
 
 | Problem | Cause / Fix |
 | --- | --- |
-| `invalid path 'Practical /...'` on clone | Trailing space in a folder name on Windows. See [Getting the Repository](#windows-error-invalid-path-practical-assignment). |
 | `docker: command not found` | Docker Desktop is not installed or not on PATH. |
 | Cannot connect to the Docker daemon | Start Docker Desktop and wait until it is running. |
 | `${PWD}` shown literally / empty mount | Use PowerShell, not CMD. In CMD use `%cd%`. |
