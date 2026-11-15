@@ -1,4 +1,5 @@
-/* Composition is an important Object-Oriented Programming (OOP) concept in C++. It describes a relationship where one class contains an object of another class as a data member.
+/* Composition is an important Object-Oriented Programming (OOP) concept in C++. It describes a relationship where one class contains 
+an object of another class as a data member.
 A Car has an Engine. */
 
 #include <iostream>
@@ -44,7 +45,6 @@ public:
 int main() {
 
     Car car1("Toyota", 2024, "V6");
-
     car1.getCarInfo();
 
     return 0;
