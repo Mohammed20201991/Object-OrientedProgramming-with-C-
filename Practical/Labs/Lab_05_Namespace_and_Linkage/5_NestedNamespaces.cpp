@@ -16,7 +16,6 @@ namespace University {
         int students = 40;
     }
 }
-
 int main() {
     cout << University::AI::students;
     cout<< endl;

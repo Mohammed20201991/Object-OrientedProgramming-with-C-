@@ -279,49 +279,14 @@ Make sure **Docker Desktop is running** before using any `docker` command.
 git clone https://github.com/Mohammed20201991/Object-OrientedProgramming-with-C-.git
 cd Object-OrientedProgramming-with-C-
 ```
-
-### Windows error: `invalid path 'Practical /Assignment/...'`
-
-If cloning on Windows ends with:
-
-```text
-error: invalid path 'Practical /Assignment/Assignment_1.pdf'
-fatal: unable to checkout working tree
-```
-
-a folder in the repository is named `Practical ` **with a trailing space**. Windows does not allow folder names ending in a space, so Git cannot create it. The download succeeded; only the checkout failed.
-
 **Workarounds**
 
-- **Clone inside WSL** (Linux allows trailing spaces), then copy the folder out:
+- **Clone inside WSL** (Linux):
 
   ```bash
   git clone https://github.com/Mohammed20201991/Object-OrientedProgramming-with-C-.git
   cd Object-OrientedProgramming-with-C-
-  mkdir -p ~/practical
-  cp -r "Practical /." ~/practical/
   ```
-
-  Open it from Windows File Explorer at `\\wsl$\<distro>\root\practical` (get `<distro>` from `wsl -l`).
-
-- **Skip the folder with sparse checkout:**
-
-  ```powershell
-  git sparse-checkout init --no-cone
-  git sparse-checkout set "/*" "!/Practical */"
-  git checkout
-  ```
-
-- **Download single files** from the GitHub web page.
-
-> **Maintainer fix:** rename the folder once from WSL/Linux, then push. After that, normal Windows clones work.
->
-> ```bash
-> git mv "Practical " Practical
-> git commit -m "Remove trailing space from Practical folder name"
-> git push origin main
-> ```
-
 ---
 
 ## Docker Development Environment
@@ -540,7 +505,6 @@ VS Code then runs inside `oop-cpp-dev`, with the compiler and debugger ready.
 
 | Problem | Cause / Fix |
 | --- | --- |
-| `invalid path 'Practical /...'` on clone | Trailing space in a folder name on Windows. See [Getting the Repository](#windows-error-invalid-path-practical-assignment). |
 | `docker: command not found` | Docker Desktop is not installed or not on PATH. |
 | Cannot connect to the Docker daemon | Start Docker Desktop and wait until it is running. |
 | `${PWD}` shown literally / empty mount | Use PowerShell, not CMD. In CMD use `%cd%`. |
