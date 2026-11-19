@@ -19,6 +19,18 @@ array.
 
 Unlike a normal fixed-size array, a vector can grow or shrink while the
 program is running.
+## Check version
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    cout << "__cplusplus = " << __cplusplus << endl;
+
+    return 0;
+}
+```
 
 To use a vector, include the `<vector>` header:
 
