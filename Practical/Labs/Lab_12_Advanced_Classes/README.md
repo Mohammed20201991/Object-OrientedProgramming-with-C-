@@ -1,4 +1,4 @@
-# Lab 11 – Advanced Classes
+# Lab 12 – Advanced Classes
 ## Objectives
 * Use static members.
 * Use friend functions.

@@ -1,4 +1,4 @@
-# Lab 10 – Abstract Classes
+# Lab 11 – Abstract Classes
 ## Objectives
 * Understand pure virtual functions.
 * Create abstract classes.

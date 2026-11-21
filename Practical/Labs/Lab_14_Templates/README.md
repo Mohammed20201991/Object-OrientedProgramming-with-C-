@@ -1,4 +1,4 @@
-# Lab 13 – Templates
+# Lab 14 – Templates
 ## Objectives
 * Understand generic programming.
 * Create function templates.

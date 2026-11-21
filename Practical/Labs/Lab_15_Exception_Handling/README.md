@@ -1,4 +1,4 @@
-# Lab 14 – Exception Handling
+# Lab 15 – Exception Handling
 ## Objectives
 * Handle runtime errors.
 * Use `try`.

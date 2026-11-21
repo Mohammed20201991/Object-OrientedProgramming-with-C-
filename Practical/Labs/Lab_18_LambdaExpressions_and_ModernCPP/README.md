@@ -1,4 +1,4 @@
-# Lab 17 – Lambda Expressions and Modern C++
+# Lab 18 – Lambda Expressions and Modern C++
 ## Objectives
 Introduce students to modern C++ programming concepts and features.
 

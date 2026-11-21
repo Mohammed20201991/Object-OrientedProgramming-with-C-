@@ -1,4 +1,4 @@
-# Lab 18 – OOP Design and UML
+# Lab 19 – OOP Design and UML
 
 ## Objectives
 Students learn how to design an object-oriented solution before writing code.

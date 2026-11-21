@@ -1,4 +1,4 @@
-# Lab 16 – STL Algorithms
+# Lab 17 – STL Algorithms
 ## Objectives
 * Use iterators.
 * Sort data.

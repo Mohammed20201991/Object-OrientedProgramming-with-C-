@@ -1,4 +1,4 @@
-# Lab 12 – Dynamic Memory and Copying
+# Lab 13 – Dynamic Memory and Copying
 
 ## Objectives
 
