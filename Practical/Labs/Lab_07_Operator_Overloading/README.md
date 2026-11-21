@@ -1,4 +1,4 @@
-# Lab 06 – Operator Overloading
+# Lab 07 – Operator Overloading
 
 ## Objectives
 
