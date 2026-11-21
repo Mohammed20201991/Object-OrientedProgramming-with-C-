@@ -1,4 +1,4 @@
-# Lab 08 – Multilevel and Multiple Inheritance
+# Lab 09 – Multilevel and Multiple Inheritance
 
 ## Objectives
 
