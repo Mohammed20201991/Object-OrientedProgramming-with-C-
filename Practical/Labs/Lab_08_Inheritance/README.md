@@ -1,4 +1,4 @@
-# Lab 07 – Inheritance
+# Lab 08 – Inheritance
 
 ## Objectives
 
